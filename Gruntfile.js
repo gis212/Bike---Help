@@ -1,14 +1,19 @@
 let { readFileSync } = require('fs')
 let { load } = require("js-yaml")
-let poststylus = () => require('poststylus')(['autoprefixer', 'postcss-font-magician', 'cssnano'])
+let poststylus = () =>
+  require('poststylus')(['autoprefixer', 'postcss-font-magician', 'cssnano'])
+
 module.exports = function(grunt) { 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     pug: {
       templates: {
         options: {
+          data: {
+            require,
+            $default_i18n: load(readFileSync('./locales/_default.yaml', 'utf8'))
+          },
           i18n: {
-            data: {$default_i18n: load(readFileSync('./locales/_default.yaml', 'utf8'))},
             locales: 'locales/!(_default).yaml',
             namespace: '$i18n',
           },
