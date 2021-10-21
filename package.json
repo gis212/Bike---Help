@@ -1,0 +1,37 @@
+{
+  "name": "bike---help",
+  "version": "1.0.0",
+  "description": "WIP",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "grunt",
+    "serve": "npm run build && http-server public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gis212/Bike---Help.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gis212/Bike---Help/issues"
+  },
+  "homepage": "https://github.com/gis212/Bike---Help#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.3.7",
+    "coffeescript": "^2.6.1",
+    "cssnano": "^5.0.8",
+    "deepmerge": "^4.2.2",
+    "grunt": "^1.4.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-stylus": "^1.2.0",
+    "grunt-pug-i18n": "^1.0.1",
+    "http-server": "^14.0.0",
+    "js-yaml": "^4.1.0",
+    "postcss-font-magician": "^3.0.0",
+    "poststylus": "^1.0.1",
+    "pug": "^3.0.2"
+  }
+}
